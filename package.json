@@ -1,0 +1,25 @@
+{
+  "name": "dependency-shrinker",
+  "version": "0.0.1",
+  "description": "a command line tool to check what dependencies of an executable are really critical and not",
+  "preferGlobal": true,
+  "bin": {
+    "depshrink": "bin/depshrink.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanekotic/dependency-shrinker.git"
+  },
+  "author": "kanekotic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kanekotic/dependency-shrinker/issues"
+  },
+  "homepage": "https://github.com/kanekotic/dependency-shrinker#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
