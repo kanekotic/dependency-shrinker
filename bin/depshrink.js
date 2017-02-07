@@ -9,13 +9,13 @@ var optionsMap = {
 }
 
 program
-    .arguments("<mode> <executable> [scaffolds...]")
-    //.command("list [executable] [dirs...]")
+    .arguments("<mode> <executable> [dirs...]")
     .action(function(mode, executable, dirs) {
         console.log('execute: in mode('+ mode + ') the executable '+ executable + ' in ' + dirs)
         if(!optionsMap[mode])
             error(mode + ': command not supported')
         
-        depsShrink(executable,dirs,optionsMap[mode].delete,true, 1000)
+        var solution = depsShrink(executable,dirs,optionsMap[mode].delete,true, 1000)
+        solution.promises.then(console.log(JSON.stringify(solution.optionals)))
     })
     .parse(process.argv);
