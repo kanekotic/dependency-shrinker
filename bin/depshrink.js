@@ -15,7 +15,13 @@ program
         if(!optionsMap[mode])
             error(mode + ': command not supported')
         
-        var solution = depsShrink(executable,dirs,optionsMap[mode].delete,true, 1000)
-        solution.promises.then(console.log(JSON.stringify(solution.optionals)))
+        depsShrink(executable,dirs,optionsMap[mode].delete,true, 1000).then((result) => {
+            console.log('Not critical files: ')
+            for(optional of result.optionals)
+            console.log('    - '+ optionals)
+            console.log('Critical files: ')
+            for(notOptional of result.notOptionals)
+            console.log('    - '+ notOptional)
+        })
     })
     .parse(process.argv);
