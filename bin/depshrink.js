@@ -2,6 +2,7 @@
 
 var program = require('commander'),
     depsShrink = require('../lib/depshrink')
+"use strict"
 
 var optionsMap = {
     list: { delete: false },
