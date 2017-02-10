@@ -22,6 +22,7 @@
   "homepage": "https://github.com/kanekotic/dependency-shrinker#readme",
   "dependencies": {
     "commander": "^2.9.0",
-    "node-dir": "^0.1.16"
+    "node-dir": "^0.1.16",
+    "tree-kill": "^1.1.0"
   }
 }
