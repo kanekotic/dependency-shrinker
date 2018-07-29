@@ -1,28 +1,36 @@
 #! /usr/bin/env node
 
 var program = require('commander'),
-    depsShrink = require('../lib/depshrink')
-"use strict"
-
-var optionsMap = {
-    list: { delete: false },
-    remove: { delete: true }
-}
+    packageJson = require('../package.json'),
+    shrink = require('../lib/dependency-shrink')
 
 program
-    .arguments("<mode> <executable> <boottime> [dirs...]")
-    .action((mode, executable, boottime, dirs) => {
-        console.log('execute: in mode('+ mode + ') the executable '+ executable + ' in ' + dirs)
-        if(!optionsMap[mode])
-            error(mode + ': command not supported')
-        
-        depsShrink(executable, dirs, optionsMap[mode].delete, true, boottime).then((result) => {
+    .version(packageJson.version)
+  
+//   program
+//     .command('<executable> <BootTime> [dirs...]')
+//     .description('converts raw guid to string format')
+//     .action((guids) => 
+//     guids.forEach(guid => {
+//       try {
+//         console.log(index.convertRaw(guid))
+//       } catch (_) {
+//         console.log(`${guid}: is not a valid raw format for a guid`)
+//       }
+//     })
+//   )
+
+program
+    .arguments("<executable> <BootTime> [dirs...]")
+    .description('tests if a file is necesary to run a binary')
+    .action((executable, bootTime, dirs) => {
+        console.log('executing '+ executable + ' in ' + dirs)
+        shrink(executable, dirs, true, bootTime)
+        .then((result) => {
             console.log('Not critical files: ')
-            for(optional of result.optionals)
-                console.log('    - '+ optional)
+            result.optionals.forEach(file => console.log(`    - ${file}`))
             console.log('Critical files: ')
-            for(notOptional of result.notOptionals)
-                console.log('    - '+ notOptional)
+            result.notOptionals.forEach(file => console.log(`    - ${file}`))
         })
     })
     .parse(process.argv);

@@ -36,24 +36,3 @@ describe('list files should', () => {
     })
 
 })
-
-// function depsShrink(executable, directories, remove, recursive, timespan) {
-//     var promises = Promise.resolve()
-//     var optionals = []
-//     var notOptionals = []
-//     for(let directory of directories){
-//         promises = promises.then(() => {return listFiles(directory, recursive)})
-//             .then((files) => {
-//                 var promisesLocal = Promise.resolve()
-//                 for(let file of files){
-//                     if(file === executable)
-//                         continue
-//                     promisesLocal = promisesLocal.then(() => {return testExecute(executable, file, timespan)})
-//                                         .then((result) => { return result.isOptional ? optionals.push(file) : notOptionals.push(file)})
-//                                         .catch(() => console.log("unable to resolve dependency level of file: " + file))
-//                 }
-//                 return promisesLocal
-//             })
-//     }
-//     return promises.then(() => { return {optionals, notOptionals}})
-// }
