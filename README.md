@@ -3,13 +3,14 @@
 a command line tool to check what dependencies of an executable are really critical and not
 ## Installation
 ```
-npm install dependency-shrinker
+npm install dependency-shrinker -g
 ```
+
 ## use
 
 this command will list the runtime dependencies that can be possible removed (will only detect the ones that will cause a crash if removed).
 ```
-depshrink list <Path to executable> <boot time> [Paths to dependencies folders]
+depshrink <Path to executable> <boot time> [Paths to dependencies folders]
 ```
 ## Warning
 if you kill the process of the command line tool at any point of execution you might end up in a situation where a dependency is missing. 
