@@ -1,8 +1,10 @@
 jest.mock('../../lib/helpers/files', () => ({
     getAll: jest.fn()
 }))
+jest.mock('../../lib/helpers/execute', () => jest.fn())
 const shrinker = require('../../lib/dependency-shrink'),
     files = require('../../lib/helpers/files'),
+    execute = require('../../lib/helpers/execute'),
     faker = require('faker')
 
 describe('list files should', () => {
@@ -13,15 +15,24 @@ describe('list files should', () => {
     })
 
     it('return a list of files that are optional and non optional',async () => {
-        let fileList = [faker.random.uuid(), faker.random.uuid()]
+        let fileList = [faker.random.uuid(), faker.random.uuid()],
+            bootTime = faker.random.number(1000)
+            executable = faker.random.uuid(),
+            recursive = faker.random.boolean()
         files.getAll.mockReturnValue(fileList)
+        execute.mockReturnValueOnce(Promise.resolve({isOptional: false}))
+        execute.mockReturnValueOnce(Promise.resolve({isOptional: true}))
 
-        let result = shrinker(directories)
+        let result = await shrinker(executable, directories, recursive, bootTime)
         
-        expect(files.getAll).toBeCalledWith(directories)
-        expect(result.optionals).toBeDefined()
-        expect(result.notOptionals).toBeDefined()
-        
+        expect(files.getAll).toBeCalledWith(directories, recursive)
+        fileList.forEach(file => {
+            expect(execute).toBeCalledWith(executable, file, bootTime)
+        })
+        expect(result).toEqual({
+            optionals:[fileList[1]],
+            notOptionals:[fileList[0]]
+        })
     })
 
 })
