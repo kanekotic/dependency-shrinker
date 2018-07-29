@@ -1,4 +1,12 @@
 # ![logomakr_6rglby](https://cloud.githubusercontent.com/assets/3071208/22743728/b6164884-ede0-11e6-9bbe-5e7643b22be7.png)
+
+[![Build Status](https://travis-ci.org/kanekotic/dependency-shrinker.svg?branch=master)](https://travis-ci.org/kanekotic/dependency-shrinker)
+[![Coverage Status](https://coveralls.io/repos/github/kanekotic/dependency-shrinker/badge.svg?branch=master)](https://coveralls.io/github/kanekotic/dependency-shrinker?branch=master)
+[![npm](https://img.shields.io/npm/dt/any-prebuilt.svg)](https://github.com/kanekotic/any-prebuilt)
+[![GitHub license](https://img.shields.io/github/license/kanekotic/any-prebuilt.svg)](https://github.com/kanekotic/any-prebuilt/blob/master/LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/any-prebuilt/graphs/commit-activity)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/kanekotic/)
+
 ## Mission
 
 a command line tool to check what dependencies of an executable are really critical and not
