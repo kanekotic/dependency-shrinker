@@ -36,6 +36,12 @@ const commander = require('commander'),
     packageJson = require('../../package.json')
 
 describe('depshrink', () => {
-
-    it('should have correct parameters',async () => {})
+    it("is version from package.json", () => {
+        expect(commander.version.mock.calls[0][0]).toBe(packageJson.version)
+    })
+    it("is has command to remove dependencies", () => {
+        expect(commander.arguments.mock.calls[0][0]).toBe("<executable> <BootTime> [dirs...]")
+        expect(commander.description.mock.calls[0][0]).toBe("tests if a file is necessary to run a binary")
+        expect(commander.action.mock.calls[0][0]).toBeInstanceOf(Function)
+    })
 })
