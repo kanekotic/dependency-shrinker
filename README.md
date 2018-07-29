@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/kanekotic/dependency-shrinker.svg?branch=master)](https://travis-ci.org/kanekotic/dependency-shrinker)
 [![Coverage Status](https://coveralls.io/repos/github/kanekotic/dependency-shrinker/badge.svg?branch=master)](https://coveralls.io/github/kanekotic/dependency-shrinker?branch=master)
-[![npm](https://img.shields.io/npm/dt/any-prebuilt.svg)](https://github.com/kanekotic/any-prebuilt)
-[![GitHub license](https://img.shields.io/github/license/kanekotic/any-prebuilt.svg)](https://github.com/kanekotic/any-prebuilt/blob/master/LICENSE)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/any-prebuilt/graphs/commit-activity)
+[![npm](https://img.shields.io/npm/dt/dependency-shrinker.svg)](https://github.com/kanekotic/dependency-shrinker)
+[![GitHub license](https://img.shields.io/github/license/kanekotic/dependency-shrinker.svg)](https://github.com/kanekotic/dependency-shrinker/blob/master/LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/kanekotic/dependency-shrinker/graphs/commit-activity)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/kanekotic/)
 
 ## Mission
