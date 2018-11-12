@@ -45,7 +45,7 @@
     "commander": "2.19.0",
     "glob": "7.1.3",
     "node-dir": "0.1.17",
-    "tree-kill": "1.2.0"
+    "tree-kill": "1.2.1"
   },
   "devDependencies": {
     "coffee": "5.1.0",
