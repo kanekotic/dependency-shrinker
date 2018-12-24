@@ -48,7 +48,7 @@
     "tree-kill": "1.2.1"
   },
   "devDependencies": {
-    "coffee": "5.1.0",
+    "coffee": "5.2.0",
     "coveralls": "3.0.2",
     "faker": "4.1.0",
     "jest": "23.6.0"
