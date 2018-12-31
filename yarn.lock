@@ -563,10 +563,10 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
-coffee@5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/coffee/-/coffee-5.2.0.tgz#7cbdb9047451db6ff7bcc25460626c9914102f2f"
-  integrity sha512-4LkhpqwTucgYM7lnVS5Hybc24uF+TxWJ7bCcGCa/vA5VK87yjdd8mcn0wOfHX2YUFi1Wj9g6cfxx9L/Xm8kBTw==
+coffee@5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/coffee/-/coffee-5.2.1.tgz#e0946a3363c740017359141484b8805f1a780dd3"
+  integrity sha512-U2caAa5S0P1ez5/SeCmmG1ke5mG9n92zBvZvucErLokBDq3Vb0Ai3KpH2iv1svdO986bJqvF6dQRdvlFqP3ZmA==
   dependencies:
     cross-spawn "^6.0.5"
     debug "^4.1.0"
