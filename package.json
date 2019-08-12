@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/kanekotic/dependency-shrinker#readme",
   "dependencies": {
-    "commander": "2.20.0",
+    "commander": "3.0.0",
     "glob": "7.1.4",
     "node-dir": "0.1.17",
     "tree-kill": "1.2.1"
