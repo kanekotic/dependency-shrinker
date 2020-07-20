@@ -42,13 +42,13 @@
   },
   "homepage": "https://github.com/kanekotic/dependency-shrinker#readme",
   "dependencies": {
-    "commander": "5.1.0",
+    "commander": "6.0.0",
     "glob": "7.1.6",
     "node-dir": "0.1.17",
     "tree-kill": "1.2.2"
   },
   "devDependencies": {
-    "codecov": "3.7.0",
+    "codecov": "3.7.1",
     "coffee": "5.4.0",
     "faker": "4.1.0",
     "jest": "26.1.0"
