@@ -1,6 +1,6 @@
 {
   "name": "dependency-shrinker",
-  "version": "1.0.105",
+  "version": "1.0.106",
   "description": "a command line tool to check what dependencies of an executable are really critical and not",
   "preferGlobal": true,
   "main": "index.js",
