@@ -50,7 +50,7 @@
   "devDependencies": {
     "codecov": "3.7.2",
     "coffee": "5.4.0",
-    "faker": "4.1.0",
-    "jest": "26.4.0"
+    "faker": "5.0.0",
+    "jest": "26.4.2"
   }
 }
